@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Nuestra Historia 4",
+  "description": "Álbum de recuerdos interactivo y d 1edicatoria romántica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

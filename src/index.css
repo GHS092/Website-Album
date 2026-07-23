@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-handwriting: "Caveat", cursive, sans-serif;
+
+  --color-cream: #FAF7F5;
+  --color-burgundy: #2A080C;
+  --color-navy: #2B2D42;
+  --color-terracotta: #E07A5F;
+  --color-passion: #C0392B;
+  --color-gold: #D4AF37;
+}
+
+@layer utilities {
+  .font-handwriting {
+    font-family: var(--font-handwriting);
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .perspective-1500 {
+    perspective: 1500px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .gpu-accelerated {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+}
+
+/* Ambient Paper Grain Noise */
+.bg-paper-noise {
+  background-color: #FAF7F5;
+  background-image: radial-gradient(rgba(224, 122, 95, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Open Album Book Crease Shadow */
+.album-spine-crease {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(42, 8, 12, 0.04) 45%,
+    rgba(42, 8, 12, 0.12) 50%,
+    rgba(42, 8, 12, 0.04) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Gold Foil Effect */
+.gold-foil-bg {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+}
+
+.gold-foil-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #FFF3A8 40%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #E07A5F/40;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E07A5F;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
